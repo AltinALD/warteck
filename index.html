@@ -28,6 +28,10 @@
   </header>
   <main>
     <section id="startseite" class="section">
+      <div class="carousel">
+        <img id="carouselImg" src="images/p1.jpg" alt="Warteck Impression" />
+        <div class="carousel-caption" id="carouselCaption"></div>
+      </div>
       <h1>Willkommen im Warteck Bad Säckingen</h1>
       <p>Genießen Sie gemütliche Atmosphäre, leckere Getränke und Snacks!</p>
     </section>
@@ -128,6 +132,24 @@
       nav.classList.remove('open');
       burger.classList.remove('open');
     });
+
+    // Carousel logic
+    const carouselImages = [
+      { src: 'images/p1.jpg', caption: '' },
+      { src: 'images/p2.jpg', caption: '' },
+      { src: 'images/p3.jpg', caption: '' }
+    ];
+    let carouselIndex = 0;
+    const carouselImg = document.getElementById('carouselImg');
+    const carouselCaption = document.getElementById('carouselCaption');
+    function showCarouselImage(idx) {
+      carouselImg.src = carouselImages[idx].src;
+      carouselCaption.textContent = carouselImages[idx].caption;
+    }
+    setInterval(() => {
+      carouselIndex = (carouselIndex + 1) % carouselImages.length;
+      showCarouselImage(carouselIndex);
+    }, 2500);
   </script>
 </body>
 </html> 

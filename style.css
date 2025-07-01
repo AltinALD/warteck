@@ -257,4 +257,40 @@ body {
   .nav-close {
     display: none;
   }
+}
+.carousel {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+  background: #222;
+  position: relative;
+}
+.carousel img {
+  width: 100%;
+  display: block;
+  height: 180px;
+  object-fit: cover;
+}
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10,61,46,0.7);
+  color: #F29E2E;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  text-align: left;
+  letter-spacing: 1px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
+@media (max-width: 600px) {
+  .carousel img {
+    height: 140px;
+  }
 } 
