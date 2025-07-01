@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warteck Bad Säckingen</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Warteck Bad Säckingen Logo" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
+      <span style="display:none;">Warteck <span>Bad Säckingen</span></span>
+    </div>
+    <button class="burger" id="burger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <button class="nav-close" id="navClose" aria-label="Menü schließen">&times;</button>
+      <ul>
+        <li><a href="#startseite">Startseite</a></li>
+        <li><a href="#getraenke">Getränke</a></li>
+        <li><a href="#snacks">Snacks</a></li>
+        <li><a href="#oeffnungszeiten">Öffnungszeiten</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="startseite" class="section">
+      <h1>Willkommen im Warteck Bad Säckingen</h1>
+      <p>Genießen Sie gemütliche Atmosphäre, leckere Getränke und Snacks!</p>
+    </section>
+    <section id="getraenke" class="section">
+      <h2>Getränke</h2>
+      <div class="drinks-category">
+        <h3>Biere</h3>
+        <div class="drinks-list">
+          <div class="drink-card">
+            <img src="images/warsteiner.jpg" alt="Warsteiner Pils" />
+            <div class="drink-info">
+              <span>Warsteiner Pils 0.5L</span>
+              <span class="price">4.00€</span>
+            </div>
+          </div>
+          <div class="drink-card">
+            <img src="images/paulaner.jpg" alt="Paulaner Weißbier" />
+            <div class="drink-info">
+              <span>Paulaner Weißbier 0.5L</span>
+              <span class="price">4.50€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="drinks-category">
+        <h3>Cocktails</h3>
+        <div class="drinks-list">
+          <div class="drink-card">
+            <img src="images/mojito.jpg" alt="Mojito" />
+            <div class="drink-info">
+              <span>Mojito</span>
+              <span class="price">7.00€</span>
+            </div>
+          </div>
+          <div class="drink-card">
+            <img src="images/sexonthebeach.jpg" alt="Sex on the Beach" />
+            <div class="drink-info">
+              <span>Sex on the Beach</span>
+              <span class="price">7.50€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="drinks-category">
+        <h3>Shots</h3>
+        <div class="drinks-list">
+          <div class="drink-card">
+            <img src="images/jaegermeister.jpg" alt="Jägermeister" />
+            <div class="drink-info">
+              <span>Jägermeister</span>
+              <span class="price">2.50€</span>
+            </div>
+          </div>
+          <div class="drink-card">
+            <img src="images/tequila.jpg" alt="Tequila" />
+            <div class="drink-info">
+              <span>Tequila</span>
+              <span class="price">2.50€</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="snacks" class="section">
+      <h2>Snacks</h2>
+      <p>Leckere Snacks – Details folgen!</p>
+    </section>
+    <section id="oeffnungszeiten" class="section">
+      <h2>Öffnungszeiten</h2>
+      <ul class="hours-list">
+        <li>Montag & Donnerstag: 15:00–01:00</li>
+        <li>Freitag & Samstag: 15:00–03:00</li>
+        <li>Sonntag: 17:00–00:00</li>
+      </ul>
+    </section>
+    <section id="kontakt" class="section">
+      <h2>Kontakt</h2>
+      <p>Schreiben Sie uns oder besuchen Sie uns vor Ort!</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div>Schützenstraße 24, Bad Säckingen</div>
+    <div>Öffnungszeiten:<br>
+      Montag & Donnerstag: 15:00–01:00<br>
+      Freitag & Samstag: 15:00–03:00<br>
+      Sonntag: 17:00–00:00
+    </div>
+  </footer>
+  <script>
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    const navClose = document.getElementById('navClose');
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    });
+    navClose.addEventListener('click', () => {
+      nav.classList.remove('open');
+      burger.classList.remove('open');
+    });
+  </script>
+</body>
+</html> 
