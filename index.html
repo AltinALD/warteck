@@ -39,59 +39,475 @@
     </section>
     <section id="getraenke" class="section">
       <h2>Getränke</h2>
-      <div class="drinks-category">
-        <h3>Biere</h3>
-        <div class="drinks-list">
-          <div class="drink-card">
-            <img src="images/warsteiner.jpg" alt="Warsteiner Pils" />
-            <div class="drink-info">
-              <span>Warsteiner Pils 0.5L</span>
-              <span class="price">4.00€</span>
-            </div>
+      <div class="category-helper">Bitte wählen Sie eine Kategorie</div>
+      <div class="category-bar" id="categoryBar">
+        <button class="category-btn active" data-category="bier">Bier</button>
+        <button class="category-btn" data-category="wein">Wein</button>
+        <button class="category-btn" data-category="mixed">Mixed Drinks</button>
+        <button class="category-btn" data-category="long">LongDrinks</button>
+        <button class="category-btn" data-category="cocktails">Cocktails</button>
+        <button class="category-btn" data-category="mocktails">Mocktails 0,0%</button>
+        <button class="category-btn" data-category="alkfrei">Alkoholfreie Getränke</button>
+        <button class="category-btn" data-category="heiss">Heißgetränke</button>
+        <button class="category-btn" data-category="shots">Shots</button>
+      </div>
+      <div class="drinks-categories">
+        <div class="drinks-category" data-category="bier">
+          <h3>Bier</h3>
+          <div class="drinks-list">
+            <!-- Bier items will be added here later -->
           </div>
-          <div class="drink-card">
-            <img src="images/paulaner.jpg" alt="Paulaner Weißbier" />
-            <div class="drink-info">
-              <span>Paulaner Weißbier 0.5L</span>
-              <span class="price">4.50€</span>
+        </div>
+        <div class="drinks-category" data-category="wein">
+          <h3>Wein</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/wein1.jpg" alt="Rotwein" />
+              <div class="drink-info">
+                <span>Rotwein 0,1L</span>
+                <span class="price">3,60€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/wein2.jpg" alt="Spätburgunder" />
+              <div class="drink-info">
+                <span>Spätburgunder 0,25L</span>
+                <span class="price">5,50€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/wein3.jpg" alt="Weißwein" />
+              <div class="drink-info">
+                <span>Weißwein 0,1L</span>
+                <span class="price">3,60€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/wein4.jpg" alt="Gutedel" />
+              <div class="drink-info">
+                <span>Gutedel 0,1L</span>
+                <span class="price">3,60€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/wein5.jpg" alt="Müller Thurgau" />
+              <div class="drink-info">
+                <span>Müller Thurgau 0,25L</span>
+                <span class="price">5,50€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/wein6.jpg" alt="Sekt" />
+              <div class="drink-info">
+                <span>Sekt 0,1L</span>
+                <span class="price">4,00€</span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="drinks-category">
-        <h3>Cocktails</h3>
-        <div class="drinks-list">
-          <div class="drink-card">
-            <img src="images/mojito.jpg" alt="Mojito" />
-            <div class="drink-info">
-              <span>Mojito</span>
-              <span class="price">7.00€</span>
+        <div class="drinks-category" data-category="mixed" style="display:none">
+          <h3>Mixed Drinks</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/mixed1.jpg" alt="Aperol Spritz" />
+              <div class="drink-info">
+                <span>Aperol Spritz</span>
+                <span class="price">6,00€</span>
+              </div>
             </div>
-          </div>
-          <div class="drink-card">
-            <img src="images/sexonthebeach.jpg" alt="Sex on the Beach" />
-            <div class="drink-info">
-              <span>Sex on the Beach</span>
-              <span class="price">7.50€</span>
+            <div class="drink-card">
+              <img src="images/mixed2.jpg" alt="Hugo" />
+              <div class="drink-info">
+                <span>Hugo</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/mixed3.jpg" alt="Lillet Wild Berry" />
+              <div class="drink-info">
+                <span>Lillet Wild Berry</span>
+                <span class="price"></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="drinks-category">
-        <h3>Shots</h3>
-        <div class="drinks-list">
-          <div class="drink-card">
-            <img src="images/jaegermeister.jpg" alt="Jägermeister" />
-            <div class="drink-info">
-              <span>Jägermeister</span>
-              <span class="price">2.50€</span>
+        <div class="drinks-category" data-category="long" style="display:none">
+          <h3>LongDrinks</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/long1.jpg" alt="Whisky Cola" />
+              <div class="drink-info">
+                <span>Whisky Cola</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long2.jpg" alt="Wodka Red Bull" />
+              <div class="drink-info">
+                <span>Wodka Red Bull</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long3.jpg" alt="Wodka Lemon" />
+              <div class="drink-info">
+                <span>Wodka Lemon</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long4.jpg" alt="Red Red" />
+              <div class="drink-info">
+                <span>Red Red</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long5.jpg" alt="Jägermeister Red Bull" />
+              <div class="drink-info">
+                <span>Jägermeister Red Bull</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long6.jpg" alt="Malibu Kirsch" />
+              <div class="drink-info">
+                <span>Malibu Kirsch</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long7.jpg" alt="Malibu Maracuja" />
+              <div class="drink-info">
+                <span>Malibu Maracuja</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long8.jpg" alt="Gin Tonic" />
+              <div class="drink-info">
+                <span>Gin Tonic</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long9.jpg" alt="Gin Lemon" />
+              <div class="drink-info">
+                <span>Gin Lemon</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long10.jpg" alt="Campari Orange" />
+              <div class="drink-info">
+                <span>Campari Orange</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long11.jpg" alt="Asbach Cola" />
+              <div class="drink-info">
+                <span>Asbach Cola</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/long12.jpg" alt="Rum Cola" />
+              <div class="drink-info">
+                <span>Rum Cola</span>
+                <span class="price">6,00€</span>
+              </div>
             </div>
           </div>
-          <div class="drink-card">
-            <img src="images/tequila.jpg" alt="Tequila" />
-            <div class="drink-info">
-              <span>Tequila</span>
-              <span class="price">2.50€</span>
+        </div>
+        <div class="drinks-category" data-category="cocktails" style="display:none">
+          <h3>Cocktails</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/cocktail1.jpg" alt="Cuba Libre" />
+              <div class="drink-info">
+                <span>Cuba Libre</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/cocktail2.jpg" alt="Mojito" />
+              <div class="drink-info">
+                <span>Mojito</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/cocktail3.jpg" alt="Caipirinha" />
+              <div class="drink-info">
+                <span>Caipirinha</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/cocktail4.jpg" alt="Tequila Sunrise" />
+              <div class="drink-info">
+                <span>Tequila Sunrise</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/cocktail5.jpg" alt="Malibu Dream" />
+              <div class="drink-info">
+                <span>Malibu Dream</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drinks-category" data-category="mocktails" style="display:none">
+          <h3>Mocktails 0,0%</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/mocktail1.jpg" alt="Virgin Mojito" />
+              <div class="drink-info">
+                <span>Virgin Mojito</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/mocktail2.jpg" alt="Cocos Paradise" />
+              <div class="drink-info">
+                <span>Cocos Paradise</span>
+                <span class="price">6,00€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drinks-category" data-category="alkfrei" style="display:none">
+          <h3>Alkoholfreie Getränke</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/alkfrei1.jpg" alt="Wasser mit Kohlensäure" />
+              <div class="drink-info">
+                <span>Wasser mit Kohlensäure 0,3L</span>
+                <span class="price">2,90€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei2.jpg" alt="Wasser still" />
+              <div class="drink-info">
+                <span>Wasser still 0,3L</span>
+                <span class="price">2,90€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei3.jpg" alt="Cola" />
+              <div class="drink-info">
+                <span>Cola 0,3L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei4.jpg" alt="Fanta" />
+              <div class="drink-info">
+                <span>Fanta 0,3L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei5.jpg" alt="Spezi" />
+              <div class="drink-info">
+                <span>Spezi 0,3L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei6.jpg" alt="Zitronenlimonade" />
+              <div class="drink-info">
+                <span>Zitronenlimonade 0,3L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei7.jpg" alt="Eistee Pfirsich" />
+              <div class="drink-info">
+                <span>Eistee Pfirsich 0,3L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei8.jpg" alt="Eistee Zitrone" />
+              <div class="drink-info">
+                <span>Eistee Zitrone 0,3L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei9.jpg" alt="Red Bull" />
+              <div class="drink-info">
+                <span>Red Bull 0,25L Dose</span>
+                <span class="price">4,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei10.jpg" alt="Orangensaft" />
+              <div class="drink-info">
+                <span>Orangensaft 0,2L</span>
+                <span class="price">2,80€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei11.jpg" alt="Maracujasaft" />
+              <div class="drink-info">
+                <span>Maracujasaft 0,2L</span>
+                <span class="price">2,80€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei12.jpg" alt="Kirschsaft" />
+              <div class="drink-info">
+                <span>Kirschsaft 0,2L</span>
+                <span class="price">2,80€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei13.jpg" alt="Schweppes Tonic" />
+              <div class="drink-info">
+                <span>Schweppes Tonic 0,2L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/alkfrei14.jpg" alt="Schweppes Bitter Lemon" />
+              <div class="drink-info">
+                <span>Schweppes Bitter Lemon 0,2L</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drinks-category" data-category="heiss" style="display:none">
+          <h3>Heißgetränke</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/heiss1.jpg" alt="Kaffee" />
+              <div class="drink-info">
+                <span>Kaffee</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/heiss2.jpg" alt="Cappuccino" />
+              <div class="drink-info">
+                <span>Cappuccino</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/heiss3.jpg" alt="Latte Macchiato" />
+              <div class="drink-info">
+                <span>Latte Macchiato</span>
+                <span class="price">3,20€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/heiss4.jpg" alt="Espresso" />
+              <div class="drink-info">
+                <span>Espresso</span>
+                <span class="price">2,50€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/heiss5.jpg" alt="Espresso Macchiato" />
+              <div class="drink-info">
+                <span>Espresso Macchiato</span>
+                <span class="price">2,80€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/heiss6.jpg" alt="div. Teesorten" />
+              <div class="drink-info">
+                <span>div. Teesorten</span>
+                <span class="price">2,50€</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drinks-category" data-category="shots" style="display:none">
+          <h3>Shots</h3>
+          <div class="drinks-list">
+            <div class="drink-card">
+              <img src="images/shot1.jpg" alt="B52" />
+              <div class="drink-info">
+                <span>B52</span>
+                <span class="price">4,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot2.jpg" alt="Springbokki" />
+              <div class="drink-info">
+                <span>Springbokki</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot3.jpg" alt="Mexikaner" />
+              <div class="drink-info">
+                <span>Mexikaner</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot4.jpg" alt="Brain" />
+              <div class="drink-info">
+                <span>Brain</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot5.jpg" alt="Orgasmus" />
+              <div class="drink-info">
+                <span>Orgasmus</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot6.jpg" alt="Ficken" />
+              <div class="drink-info">
+                <span>Ficken</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot7.jpg" alt="Vogeion" />
+              <div class="drink-info">
+                <span>Vogeion</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot8.jpg" alt="Tequila Gold" />
+              <div class="drink-info">
+                <span>Tequila Gold</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot9.jpg" alt="Tequila Silver" />
+              <div class="drink-info">
+                <span>Tequila Silver</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot10.jpg" alt="Berliner Luft" />
+              <div class="drink-info">
+                <span>Berliner Luft</span>
+                <span class="price">3,00€</span>
+              </div>
+            </div>
+            <div class="drink-card">
+              <img src="images/shot11.jpg" alt="Wodka" />
+              <div class="drink-info">
+                <span>Wodka</span>
+                <span class="price">3,00€</span>
+              </div>
             </div>
           </div>
         </div>
@@ -152,6 +568,25 @@
       carouselIndex = (carouselIndex + 1) % carouselImages.length;
       showCarouselImage(carouselIndex);
     }, 2500);
+
+    // Category bar logic
+    const categoryBar = document.getElementById('categoryBar');
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const drinkCategories = document.querySelectorAll('.drinks-category');
+    categoryBar.addEventListener('click', (e) => {
+      if (e.target.classList.contains('category-btn')) {
+        categoryBtns.forEach(btn => btn.classList.remove('active'));
+        e.target.classList.add('active');
+        const cat = e.target.getAttribute('data-category');
+        drinkCategories.forEach(dc => {
+          if (dc.getAttribute('data-category') === cat) {
+            dc.style.display = '';
+          } else {
+            dc.style.display = 'none';
+          }
+        });
+      }
+    });
   </script>
 </body>
 </html> 

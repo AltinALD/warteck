@@ -196,6 +196,10 @@ body {
   }
 }
 @media (max-width: 599px) {
+  .section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
   .drinks-list {
     gap: 2.2rem;
   }
@@ -203,10 +207,10 @@ body {
     padding: 2rem 1.2rem;
     border-radius: 22px;
     min-width: 0;
-    width: 98vw;
-    max-width: 98vw;
-    margin-left: -1vw;
-    margin-right: -1vw;
+    width: 95vw;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
   }
   .drink-card img {
@@ -345,4 +349,58 @@ body {
   .carousel-welcome {
     font-size: 1.3rem;
   }
+}
+.category-bar {
+  position: sticky;
+  top: 64px;
+  z-index: 90;
+  background: #101613;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  border-bottom: 1.5px solid #18382B;
+  margin-bottom: 1.2rem;
+  scrollbar-width: none;
+}
+.category-bar::-webkit-scrollbar {
+  display: none;
+}
+.category-btn {
+  background: #18382B;
+  color: #F29E2E;
+  border: none;
+  border-radius: 18px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1.08rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+  outline: none;
+}
+.category-btn.active, .category-btn:focus {
+  background: #F29E2E;
+  color: #0A3D2E;
+}
+@media (max-width: 700px) {
+  .category-bar {
+    top: 56px;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    gap: 0.3rem;
+  }
+  .category-btn {
+    font-size: 0.98rem;
+    padding: 0.45rem 0.8rem;
+  }
+}
+.category-helper {
+  font-size: 1rem;
+  color: #F29E2E;
+  margin-bottom: 0.3rem;
+  margin-top: 0.2rem;
+  text-align: left;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
 } 
