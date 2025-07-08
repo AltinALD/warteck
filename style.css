@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -138,7 +140,8 @@ body {
   background: #18382B;
   border-radius: 16px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 1.5rem;
   padding: 1.2rem 1.2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -146,26 +149,55 @@ body {
   min-width: 0;
 }
 .drink-card img {
-  width: 130px;
-  height: 130px;
+  width: 100%;
+  height: auto;
+  max-height: 260px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 18px 18px 0 0;
   background: #222;
+  display: block;
 }
 .drink-info {
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+  width: 100%;
+  margin-bottom: 0.18em;
 }
-.drink-info span {
-  font-size: 1.45rem;
-  line-height: 1.3;
+.drink-info:last-child {
+  margin-bottom: 0;
+}
+.drink-info span,
+.price {
+  font-size: 0.93rem;
+  line-height: 1.2;
 }
 .price {
   color: #F29E2E;
   font-weight: bold;
-  margin-top: 0.2em;
-  font-size: 1.35rem;
+  min-width: 44px;
+  text-align: right;
+  margin-left: 0.5em;
+  font-size: 0.93rem;
+}
+.drink-title, .drinks-list h3 {
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  font-size: 1.55rem;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.32em;
+  margin-top: 0.18em;
+  text-shadow: 0 3px 16px rgba(0,0,0,0.28), 0 2px 0 #F29E2E;
+  line-height: 1.18;
+  font-style: italic;
+  background: linear-gradient(90deg, #fff 70%, #F29E2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 @media (min-width: 600px) {
   .drinks-list {
@@ -207,22 +239,52 @@ body {
     padding: 2rem 1.2rem;
     border-radius: 22px;
     min-width: 0;
-    width: 95vw;
-    max-width: 420px;
+    width: 92vw;
+    max-width: 340px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
   }
   .drink-card img {
-    width: 120px;
-    height: 120px;
-    border-radius: 16px;
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    border-radius: 18px 18px 0 0;
   }
-  .drink-info span {
-    font-size: 1.7rem;
+  .drink-info {
+    width: 100%;
+  }
+  .drink-info span,
+  .price {
+    font-size: 0.93rem;
+    line-height: 1.2;
   }
   .price {
-    font-size: 1.5rem;
+    min-width: 44px;
+    text-align: right;
+    margin-left: 0.5em;
+    color: #F29E2E;
+    font-weight: bold;
+    font-size: 0.93rem;
+  }
+  .drink-card > .drink-title, .drink-card > h3, .drink-title, .drinks-list h3 {
+    font-size: 1.13rem !important;
+    color: #fff !important;
+    font-weight: 900 !important;
+    line-height: 1.15;
+    margin-bottom: 0.22em;
+    margin-top: 0.12em;
+    letter-spacing: 0.03em;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.22), 0 1.5px 0 #F29E2E;
+    font-style: italic;
+    background: linear-gradient(90deg, #fff 70%, #F29E2E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    border: 2px solid red;
+    background-color: yellow;
   }
 }
 .footer {
