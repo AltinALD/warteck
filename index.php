@@ -670,7 +670,7 @@
       </div>
       <h2>Kontakt</h2>
       <p>Schreiben Sie uns oder besuchen Sie uns vor Ort!</p>
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form" id="contactForm" method="POST" action="send_email.php">
         <div class="form-group">
           <input type="text" id="name" name="name" required placeholder="Vorname" />
           <label for="name">Vorname</label>
