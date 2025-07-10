@@ -465,4 +465,185 @@ body {
   text-align: left;
   letter-spacing: 0.5px;
   opacity: 0.85;
+}
+
+/* Enhanced contact form styles */
+.contact-form {
+  max-width: 420px;
+  margin: 2em auto 1.5em auto;
+  padding: 1.5em 1em 1.2em 1em;
+  background: linear-gradient(135deg, #fff 80%, #F29E2E18 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(10,61,46,0.10), 0 1.5px 0 #F29E2E;
+  border-left: 6px solid #F29E2E;
+  border-top: 4px solid #0A3D2E;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+  position: relative;
+}
+.contact-form .form-group label {
+  font-size: 1em;
+  font-weight: 600;
+  color: #0A3D2E;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.1em;
+}
+/* Floating label styles for contact form */
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 1.2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.contact-form .form-group label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #0A3D2E;
+  font-size: 1em;
+  font-weight: 500;
+  pointer-events: none;
+  transition: all 0.18s cubic-bezier(.4,0,.2,1);
+  opacity: 0.85;
+  padding: 0 4px;
+  z-index: 2;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 1.1em 0.9em 0.5em 0.9em;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1.5px solid #18382B;
+  background: #f9f7f3;
+  color: #18382B;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(242,158,46,0.07);
+  margin-bottom: 0;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 2px solid #F29E2E;
+  background: #fffbe9;
+  box-shadow: 0 0 0 2px #F29E2E33;
+}
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+  top: 0.2em;
+  left: 10px;
+  font-size: 0.82em;
+  color: #F29E2E;
+  background: #fffbe9;
+  opacity: 1;
+  z-index: 3;
+  padding: 0 4px;
+  transform: none;
+}
+.contact-form input,
+.contact-form textarea {
+  min-height: 2.3em;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: transparent;
+}
+.contact-form button[type="submit"] {
+  margin-top: 0.5em;
+  padding: 0.85em 0;
+  background: linear-gradient(90deg, #F29E2E 60%, #0A3D2E 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.13em;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(10,61,46,0.08);
+  letter-spacing: 0.5px;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.contact-form button[type="submit"]:hover,
+.contact-form button[type="submit"]:focus {
+  background: linear-gradient(90deg, #0A3D2E 10%, #F29E2E 90%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(242,158,46,0.13);
+  transform: translateY(-2px) scale(1.03);
+}
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+  background: #eee;
+  color: #aaa;
+  border: 1.5px dashed #ccc;
+}
+@media (max-width: 600px) {
+  .contact-form {
+    max-width: 98vw;
+    padding: 1em 0.3em 0.8em 0.3em;
+    border-left: 3px solid #F29E2E;
+    border-top: 2px solid #0A3D2E;
+  }
+  .contact-form .form-group label {
+    left: 10px;
+    font-size: 0.98em;
+  }
+  .contact-form input:focus + label,
+  .contact-form input:not(:placeholder-shown) + label,
+  .contact-form textarea:focus + label,
+  .contact-form textarea:not(:placeholder-shown) + label {
+    left: 7px;
+    font-size: 0.8em;
+  }
+}
+#google-maps-placeholder {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#google-maps-placeholder iframe {
+  width: 100%;
+  min-height: 250px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+@media (max-width: 600px) {
+  #google-maps-placeholder {
+    max-width: 98vw;
+  }
+  #google-maps-placeholder iframe {
+    min-height: 180px;
+  }
+} 
+.ig-link, .ig-link-contact a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.7em;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border-radius: 50%;
+  background: none;
+  box-shadow: none;
+}
+.ig-link svg, .ig-link-contact svg {
+  display: block;
+  transition: stroke 0.2s, box-shadow 0.2s;
+}
+.ig-link:hover svg, .ig-link-contact a:hover svg {
+  stroke: #e1306c;
+  box-shadow: 0 2px 8px rgba(225,48,108,0.10);
+}
+.ig-link-header {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+@media (max-width: 600px) {
+  .ig-link-header {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .ig-link-contact {
+    margin-bottom: 1em;
+  }
 } 
